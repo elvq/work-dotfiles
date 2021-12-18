@@ -1,0 +1,9 @@
+[2021-12-17 20:30:20.233] [exthost] [info] Extension host with pid 17364 started
+[2021-12-17 20:30:20.234] [exthost] [info] Skipping acquiring lock for /home/eric/.config/Code - OSS/User/workspaceStorage/c21baf28d4fc78f711c401e4ba3e906f.
+[2021-12-17 20:30:20.314] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2021-12-17 20:30:20.323] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*', root cause: vscode.github
+[2021-12-17 20:30:20.491] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2021-12-17 20:30:20.520] [exthost] [info] Eager extensions activated
+[2021-12-17 20:30:20.525] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2021-12-17 20:31:24.122] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-12-17 20:31:25.134] [exthost] [info] Extension host with pid 17364 exiting with code 0

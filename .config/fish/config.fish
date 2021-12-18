@@ -1,0 +1,205 @@
+
+# Put system-wide fish configuration entries here
+# or in .fish files in conf.d/
+# Files in conf.d can be overridden by the user
+# by files with the same name in $XDG_CONFIG_HOME/fish/conf.d
+
+# This file is run by all fish instances.
+# To include configuration only for login shells, use
+# if status is-login
+#    ...
+# end
+# To include configuration only for interactive shells, use
+# if status is-interactive
+#   ...
+# end
+
+
+
+
+#list
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l -g --icons'
+alias lt='exa -l -g --icons --tree --level=2 -a'
+alias l='exa'
+alias l.="exa -A | egrep '^\.'"
+
+#Platinum Searcher
+alias pt='pt --hidden -i -e'
+
+
+#Alias for GitHub Bare directory
+alias config='/usr/bin/git --git-dir=/home/eric/dotfiles/ --work-tree=$HOME'
+
+
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+
+#Eric add to prep Movie files for my Plex Server
+alias prep='sh ~/plex-prep.sh'
+
+#fix obvious typo's
+alias cd..='cd ..'
+alias pdw="pwd"
+alias udpate='sudo pacman -Syyu'
+alias upate='sudo pacman -Syyu'
+alias updte='sudo pacman -Syyu'
+alias updqte='sudo pacman -Syyu'
+alias upqll="pacman -Syu --noconfirm"
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+#readable output
+alias df='df -h'
+
+#pacman unlock
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
+
+#arcolinux logout unlock
+alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
+
+#free
+alias free="free -mt"
+
+#use all cores
+alias uac="sh ~/.bin/main/000*"
+
+#continue download
+alias wget="wget -c"
+
+#userlist
+alias userlist="cut -d: -f1 /etc/passwd"
+
+#merge new settings
+alias merge="xrdb -merge ~/.Xresources"
+
+# Aliases for software managment
+# pacman or pm
+alias pacman='sudo pacman --color auto'
+alias update='sudo pacman -Syyu'
+
+# paru as aur helper - updates everything
+alias pksyua="sudo paru -Syu --noconfirm"
+alias upall="paru -Syu --noconfirm"
+
+#ps
+alias psa="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+#grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#add new fonts
+alias update-fc='sudo fc-cache -fv'
+
+
+
+#switch between bash and zsh
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+#quickly kill conkies
+alias kc='killall conky'
+
+#hardware info --short
+alias hw="hwinfo --short"
+
+#skip integrity check
+alias yayskip='yay -S --mflags --skipinteg'
+alias trizenskip='trizen -S --skipinteg'
+
+#check vulnerabilities microcode
+alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
+
+#get fastest mirrors in your neighborhood
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+#mounting the folder Public for exchange between host and guest on virtualbox
+alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
+
+
+
+#youtube-dl
+alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+
+
+
+#Cleanup orphaned packages
+alias cleanup="sudo pacman -Rns (pacman -Qtdq) ;  rclone copy  /var/cache/pacman/pkg/   onedrive_elvq:pacman/pkg/ -P -L  && sudo rm -rf /var/cache/pacman/pkg/* ; sudo rm -rf /var/lib/plex/Plex\ Media\ Server/Cache/* " 
+
+#get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+#nano for important configuration files
+#know what you do in these files
+alias nlightdm="sudo nano /etc/lightdm/lightdm.conf"
+alias npacman="sudo nano /etc/pacman.conf"
+alias ngrub="sudo nano /etc/default/grub"
+alias nconfgrub="sudo nano /boot/grub/grub.cfg"
+alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
+alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
+alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+
+
+
+#systeminfo
+alias probe="sudo -E hw-probe -all -upload"
+
+#shutdown or reboot
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
+starship init fish | source
+#RUST Stuff
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#neofetch
+#rsfetch -B -N -k -P -r -s  -h -w  -u -t -@ -U -p 'pacman' -C '@'| lolcat
+neofetch | lolcat
+#neofetch
+
+
+#Eric Add to fetch Movies and TV Shows from Put.io into the local /Media foder
+
+alias tvshows='rclone copy putio:TVShows  /Media/TVShows  -P -L'
+
+alias movies='rclone copy putio:Movies  /Media/Movies  -P -L'
+
+alias books='rclone copy putio:Books   /Media/Books  -P -L'
+
+#Eric Add Backup of Music Server (salon)  on Media Server (bureau)
+alias bkmusic='rclone sync homenas:../../srv/dev-disk-by-uuid-9a2f5451-cec1-4203-a09a-04abccd0b953/Music  /Media/Music/  -P -L'
+alias bkmovies='rclone sync /Media/Movies  homenas:../../srv/dev-disk-by-uuid-9a2f5451-cec1-4203-a09a-04abccd0b953/Movies  -P -L'
+alias bktvshows='rclone sync /Media/TVShows  homenas:../../srv/dev-disk-by-uuid-9a2f5451-cec1-4203-a09a-04abccd0b953/TV-Shows  -P -L'
+
+#Eric Add Backup for Wallpapers on OneDrive_elvq
+alias bkwallpapers='rclone sync /OneDrive_elvq/Wallpapers/  onedrive_elvq:Wallpapers  -P -L'
+
+alias backup='bkmusic && bkmovies && bktvshows && bkwallpapers &'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#Uncomment to use coda
+#eval /home/eric/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+
+
+# <<< conda initialize <<<
+##uncomment to use conda
+#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/eric/.ghcup/bin $PATH # ghcup-env
