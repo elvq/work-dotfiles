@@ -1,0 +1,60 @@
+XMonad is recompiling and replacing itself another XMonad process because the current process is called "xmonad" but the compiled configuration should be called "xmonad-x86_64-linux"
+XMonad will use ghc to recompile, because "/home/eric/.xmonad/build" does not exist.
+XMonad skipping recompile because it is not forced (e.g. via --recompile), and neither xmonad.hs nor any *.hs / *.lhs / *.hsc files in lib/ have been changed.
+polybar|notice:  Parsing config file: /home/eric/.config/polybar/config
+polybar|notice:  Loaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)
+polybar|notice:  Loaded font "FontAwesome:size=13" (name=FontAwesome, offset=0, file=/usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.ttf)
+polybar|notice:  Loaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)
+polybar|notice:  Loaded font "Noto Sans Mono:size=10" (name=Noto Sans Mono, offset=0, file=/usr/share/fonts/noto/NotoSansMono-Regular.ttf)
+polybar|notice:  Loaded font "FontAwesome5Brands:size=13" (name=Font Awesome 5 Brands, offset=0, file=/usr/share/fonts/TTF/fa-brands-400.ttf)
+[ 26/03/2021 20:49:24.814 get_buffer_age WARN ] GLX_EXT_buffer_age not supported by your driver,`use-damage` has to be disabled
+
+** (xfce4-power-manager:14321): WARNING **: 20:49:24.842: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.freedesktop.PowerManagement': no such name
+
+
+** (xfce4-power-manager:14321): WARNING **: 20:49:24.842: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.xfce.PowerManager': no such name
+
+
+(xfce4-power-manager:14321): xfce4-power-manager-WARNING **: 20:49:24.842: Unable to connect to session manager : Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
+
+(xfce4-power-manager:14321): GLib-GObject-WARNING **: 20:49:24.861: ../glib/gobject/gsignal.c:2614: signal 'Changed' is invalid for instance '0x55a9560aed10' of type 'GDBusProxy'
+
+(xfce4-power-manager:14321): xfce4-power-manager-WARNING **: 20:49:24.870: could not map keysym 1008ffa8 to keycode
+
+
+(xfce4-power-manager:14321): xfce4-power-manager-WARNING **: 20:49:24.895: Failed to get keyboard max brightness level : GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.UPower.KbdBacklight” on object at path /org/freedesktop/UPower/KbdBacklight
+polybar|error: Failed to reconfigure tray client, removing... (XCB_WINDOW (3))
+
+(pamac-tray:14311): Gdk-CRITICAL **: 20:49:24.929: gdk_window_thaw_toplevel_updates: assertion 'window->update_and_descendants_freeze_count > 0' failed
+
+** (volumeicon:14320): WARNING **: 20:49:24.987: Binding 'AudioRaiseVolume' failed!
+Failed to bind AudioRaiseVolume
+
+** (volumeicon:14320): WARNING **: 20:49:24.987: Binding 'AudioLowerVolume' failed!
+Failed to bind AudioLowerVolume
+
+** (volumeicon:14320): WARNING **: 20:49:24.988: Binding 'AudioMute' failed!
+Failed to bind AudioMute
+
+(sakura:14419): VTE-WARNING **: 20:49:27.685: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:14419): VTE-WARNING **: 20:49:27.685: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:49:55.144: updates_checker.vala:71: check updates
+** Message: 20:49:55.512: updates_checker.vala:101: 0 updates found
+** Message: 20:49:58.281: updates_checker.vala:71: check updates
+** Message: 20:49:58.653: updates_checker.vala:101: 0 updates found
+** Message: 20:50:21.994: updates_checker.vala:71: check updates
+** Message: 20:50:22.338: updates_checker.vala:101: 0 updates found
+
+(sakura:15446): VTE-WARNING **: 20:52:54.705: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:15446): VTE-WARNING **: 20:52:54.706: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:53:44.963: updates_checker.vala:71: check updates
+** Message: 20:53:45.335: updates_checker.vala:101: 0 updates found
+** Message: 20:53:52.628: updates_checker.vala:71: check updates
+** Message: 20:53:52.989: updates_checker.vala:101: 0 updates found
+user error (Error in function getWindowAttributes)
+
+(thunar:15183): thunar-WARNING **: 20:56:33.572: Content type loading failed for .goutputstream-0D4K00: Error when getting information for file “/home/eric/dotfiles/.goutputstream-0D4K00”: No such file or directory
+
+(thunar:15183): thunar-WARNING **: 20:56:33.698: Content type loading failed for .goutputstream-D0EI00: Error when getting information for file “/home/eric/dotfiles/.goutputstream-D0EI00”: No such file or directory

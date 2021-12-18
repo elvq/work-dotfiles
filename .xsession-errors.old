@@ -1,0 +1,130 @@
+XMonad is recompiling and replacing itself another XMonad process because the current process is called "xmonad" but the compiled configuration should be called "xmonad-x86_64-linux"
+XMonad will use ghc to recompile, because "/home/eric/.xmonad/build" does not exist.
+XMonad skipping recompile because it is not forced (e.g. via --recompile), and neither xmonad.hs nor any *.hs / *.lhs / *.hsc files in lib/ have been changed.
+polybar|notice:  Parsing config file: /home/eric/.config/polybar/config
+polybar|notice:  Loaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)
+polybar|notice:  Loaded font "FontAwesome:size=13" (name=FontAwesome, offset=0, file=/usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.ttf)
+polybar|notice:  Loaded font "Noto Sans:size=10" (name=Noto Sans, offset=0, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)
+polybar|notice:  Loaded font "Noto Sans Mono:size=10" (name=Noto Sans Mono, offset=0, file=/usr/share/fonts/noto/NotoSansMono-Regular.ttf)
+polybar|notice:  Loaded font "FontAwesome5Brands:size=13" (name=Font Awesome 5 Brands, offset=0, file=/usr/share/fonts/TTF/fa-brands-400.ttf)
+[ 26/03/2021 20:18:22.637 get_buffer_age WARN ] GLX_EXT_buffer_age not supported by your driver,`use-damage` has to be disabled
+
+** (xfce4-power-manager:7912): WARNING **: 20:18:22.648: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.freedesktop.PowerManagement': no such name
+
+
+** (xfce4-power-manager:7912): WARNING **: 20:18:22.649: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.xfce.PowerManager': no such name
+
+
+(xfce4-power-manager:7912): xfce4-power-manager-WARNING **: 20:18:22.649: Unable to connect to session manager : Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
+
+(xfce4-power-manager:7912): libnotify-WARNING **: 20:18:22.663: Failed to connect to proxy
+
+(xfce4-power-manager:7912): GLib-GObject-WARNING **: 20:18:22.669: ../glib/gobject/gsignal.c:2614: signal 'Changed' is invalid for instance '0x5653a3adc4b0' of type 'GDBusProxy'
+
+(xfce4-power-manager:7912): xfce4-power-manager-WARNING **: 20:18:22.679: could not map keysym 1008ffa8 to keycode
+
+
+(xfce4-power-manager:7912): xfce4-power-manager-WARNING **: 20:18:22.692: Failed to get keyboard max brightness level : GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.UPower.KbdBacklight” on object at path /org/freedesktop/UPower/KbdBacklight
+polybar|error: Failed to reconfigure tray client, removing... (XCB_WINDOW (3))
+
+(pamac-tray:7913): Gdk-CRITICAL **: 20:18:22.827: gdk_window_thaw_toplevel_updates: assertion 'window->update_and_descendants_freeze_count > 0' failed
+
+** (volumeicon:7915): WARNING **: 20:18:22.890: Binding 'AudioRaiseVolume' failed!
+Failed to bind AudioRaiseVolume
+
+** (volumeicon:7915): WARNING **: 20:18:22.892: Binding 'AudioLowerVolume' failed!
+Failed to bind AudioLowerVolume
+
+** (volumeicon:7915): WARNING **: 20:18:22.892: Binding 'AudioMute' failed!
+Failed to bind AudioMute
+
+(sakura:8048): VTE-WARNING **: 20:18:30.722: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:8048): VTE-WARNING **: 20:18:30.722: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:18:53.144: updates_checker.vala:71: check updates
+** Message: 20:18:53.492: updates_checker.vala:101: 0 updates found
+** Message: 20:19:23.872: updates_checker.vala:71: check updates
+** Message: 20:19:24.235: updates_checker.vala:101: 0 updates found
+
+(sakura:8262): VTE-WARNING **: 20:20:47.213: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:8262): VTE-WARNING **: 20:20:47.213: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:26:31.916: updates_checker.vala:71: check updates
+** Message: 20:26:32.261: updates_checker.vala:101: 0 updates found
+** Message: 20:28:59.111: updates_checker.vala:71: check updates
+** Message: 20:28:59.441: updates_checker.vala:101: 0 updates found
+** Message: 20:30:48.435: updates_checker.vala:71: check updates
+** Message: 20:30:48.781: updates_checker.vala:101: 0 updates found
+** Message: 20:31:13.576: updates_checker.vala:71: check updates
+** Message: 20:31:13.921: updates_checker.vala:101: 0 updates found
+** Message: 20:31:48.172: updates_checker.vala:71: check updates
+** Message: 20:31:48.530: updates_checker.vala:101: 0 updates found
+** Message: 20:32:06.649: updates_checker.vala:71: check updates
+** Message: 20:32:06.990: updates_checker.vala:101: 0 updates found
+** Message: 20:33:14.365: updates_checker.vala:71: check updates
+** Message: 20:33:14.739: updates_checker.vala:101: 0 updates found
+user error (Error in function getWindowAttributes)
+user error (Error in function getWindowAttributes)
+
+(sakura:9690): VTE-WARNING **: 20:33:38.783: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:9690): VTE-WARNING **: 20:33:38.783: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+user error (Error in function getWindowAttributes)
+
+(sakura:9853): VTE-WARNING **: 20:38:35.299: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:9853): VTE-WARNING **: 20:38:35.299: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:40:23.453: updates_checker.vala:71: check updates
+** Message: 20:40:23.891: updates_checker.vala:101: 0 updates found
+[ 26/03/2021 20:40:33.939 glx_bind_pixmap ERROR ] Failed to query info of pixmap 0x0140030f.
+[ 26/03/2021 20:40:33.940 paint_one ERROR ] Failed to bind texture for window 0x02800b07.
+[ 26/03/2021 20:40:33.940 paint_one ERROR ] Window 0x02800b07 is missing painting data.
+user error (Error in function getWindowAttributes)
+** Message: 20:43:22.055: updates_checker.vala:71: check updates
+** Message: 20:43:22.441: updates_checker.vala:101: 0 updates found
+** Message: 20:45:47.223: updates_checker.vala:71: check updates
+** Message: 20:45:47.582: updates_checker.vala:101: 0 updates found
+
+(sakura:13354): VTE-WARNING **: 20:46:12.931: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:13354): VTE-WARNING **: 20:46:12.932: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:46:28.181: updates_checker.vala:71: check updates
+** Message: 20:46:28.584: updates_checker.vala:101: 0 updates found
+user error (Error in function getWindowAttributes)
+** Message: 20:46:42.130: updates_checker.vala:71: check updates
+
+(sakura:13852): VTE-WARNING **: 20:46:42.228: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:13852): VTE-WARNING **: 20:46:42.230: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+** Message: 20:46:42.575: updates_checker.vala:101: 0 updates found
+
+(sakura:13952): VTE-WARNING **: 20:47:09.676: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+
+(sakura:13952): VTE-WARNING **: 20:47:09.682: (../vte/src/vtegtk.cc:2517):int vte_terminal_match_add_regex(VteTerminal*, VteRegex*, guint32): runtime check failed: (_vte_regex_has_multiline_compile_flag(regex))
+[13993:13993:0326/204744.651638:ERROR:process_singleton_posix.cc(295)] The profile appears to be in use by another Chromium process (1797) on another computer (eric-virtualbox). Chromium has locked the profile so that it doesn't get corrupted. If you are sure no other processes are using this profile, you can unlock the profile and relaunch Chromium.
+[14022:14022:0326/204744.942895:ERROR:vaapi_wrapper.cc(573)] Could not get a valid VA display
+Gdk-Message: 20:49:14.983: sakura: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.987: polkit-gnome-authentication-agent-1: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.988: volumeicon: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.988: thunar: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.990: xfce4-notifyd: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+polybar|notice:  Termination signal received, shutting down...
+Gdk-Message: 20:49:14.992: xfce4-power-manager: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+XIO:  fatal IO error 22 (Invalid argument) on X server ":0"
+      after 128556 requests (128554 known processed) with 0 events remaining.
+Gdk-Message: 20:49:14.994: subl3: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.995: pamac-tray: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.996: sakura: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.999: sakura: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+Gdk-Message: 20:49:14.999: sakura: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+

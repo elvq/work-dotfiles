@@ -1,0 +1,13 @@
+[user]
+	email = eric.levanquyen@gmail.com
+	username = elvq
+	name = elvq
+	password = Rust4579
+[use]
+	rname = elvq
+[pull]
+	rebase = false
+[push]
+	default = simple
+[credential]
+	helper = cache --timeout=32000
