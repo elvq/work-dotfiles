@@ -4,7 +4,7 @@
 #Mod4 = Super key
 modkey = "Mod4"
 workspaces = []
-tags = ["1_Browser", "2_Stocks", "3_Code", "4_Browser", "5_Mail", "6_Spotify", "7_TV", "8_Calibre", "9_System"]
+tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 #tags = ["", "", "", "", "", "", "", "", ""]
 #tags = ["www", "edit", "gimp", "inkscape", "meld", "video","vm", "files", "music"]
 
@@ -75,19 +75,19 @@ key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "termite"
 modifier = ["Control", "Alt"]
 key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "termite"
 modifier = ["Control", "Alt"]
 key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "termite"
 modifier = ["modkey"]
 key = "Return"
 
@@ -282,7 +282,7 @@ key = "parenleft"
 command = "GotoTag"
 value = "6"
 modifier = ["modkey"]
-key = "minus"
+key = "section"
 
 [[keybind]]
 command = "GotoTag"
@@ -294,7 +294,7 @@ key = "egrave"
 command = "GotoTag"
 value = "8"
 modifier = ["modkey"]
-key = "underscore"
+key = "exclam"
 
 [[keybind]]
 command = "GotoTag"
@@ -336,7 +336,7 @@ key = "parenleft"
 command = "Execute"
 value = "leftwm-command \"SendWindowToTag 6\" \"SendWorkspaceToTag 0 5\""
 modifier = ["modkey", "Shift"]
-key = "minus"
+key = "section"
 
 [[keybind]]
 command = "Execute"
@@ -348,7 +348,7 @@ key = "egrave"
 command = "Execute"
 value = "leftwm-command \"SendWindowToTag 8\" \"SendWorkspaceToTag 0 7\""
 modifier = ["modkey", "Shift"]
-key = "underscore"
+key = "exclam"
 
 [[keybind]]
 command = "Execute"

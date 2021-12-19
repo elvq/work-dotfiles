@@ -17,11 +17,11 @@ function run {
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
-#(sleep 2; run $HOME/.config/polybar/launch.sh) &
+xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --mode 1920x1200 --pos 0x0 --rotate normal
 
-#New Polyybar with Shades Design
-#./.config/polybar/cuts/launch.sh
-#./.config/polybar/cuts/scripts/styles.sh --Nord
+
+
+#(sleep 2; run $HOME/.config/polybar/launch.sh) &
 
 
 #Launching Cups for printing
@@ -33,10 +33,6 @@ sudo systemctl start cups
 #Old Polyybar
 ./.config/polybar/launch.sh --blocks
 
-#./config/polybar/blocks/scripts/styles.sh --nord
-
-
-
 #change your keyboard if you need it
 #setxkbmap -layout be
 
@@ -44,75 +40,40 @@ sudo systemctl start cups
 xsetroot -cursor_name left_ptr &
 
 #start ArcoLinux Welcome App
-#run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 
 #Some ways to set your wallpaper besides variety or nitrogen
-#feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #start the conky to learn the shortcuts
-#start the conky to learn the shortcuts
+
 #(conky -c $HOME/.xmonad/scripts/system-overview) &
-
-
-#Loading some local fonts
-xset +fp ~/.fonts/misc/
-
 
 #starting utility applications at boot time
 run variety &
 run nm-applet &
 run pamac-tray &
-#run xfce4-power-manager &
+run xfce4-power-manager &
 run volumeicon &
+
+run barrier --daemon --restart &
+
 numlockx on &
 blueberry-tray &
 picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-#Eric add to backup Movies from Bureau to Salon
-#bkmusic &
-#bkmovies&
-#bktvshows &
-
-
 #starting user applications at boot time
 #nitrogen --restore &
-run caffeine &
+#run caffeine &
 #run vivaldi-stable &
 #run firefox &
 #run thunar &
 #run spotify &
 #run atom &
-run barrier --daemon --restart &
+
 #run telegram-desktop &
 #run discord &
-#run dropbox &
+run dropbox &
 #run insync start &
 #run ckb-next -b &
-
-#Setting wallpaper with feh last , otherwise it would hide other stuff
-#Using Folder of B Movie & Horror Movie  Posters
-#while true;
-
-
-#Using Dropbox folder
-
-#do	run feh --randomize --bg-max --recursive  --randomize ~/Dropbox/Wallpapers/ ;
-#	sleep 90;
-#done
-
-
-#Using OneDrive_elvq folder
-#while true;
-
-#do	run feh --randomize --bg-max --recursive  --randomize /OneDrive_elvq/Wallpapers/ ;
-#	sleep 90;
-#done
-
-
-
-#while true;
-
-#do	run feh --randomize --bg-max --recursive  --randomize /OneDrive_elvq/Wallpapers/ ;
-#	sleep 90;
-#done

@@ -19,7 +19,7 @@ import qualified Codec.Binary.UTF8.String as UTF8
 import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
 import XMonad.Layout.ResizableTile
-
+---import XMonad.Layout.NoBorders
 import XMonad.Layout.Fullscreen (fullscreenFull)
 import XMonad.Layout.Cross(simpleCross)
 import XMonad.Layout.Spiral(spiral)
@@ -27,8 +27,6 @@ import XMonad.Layout.ThreeColumns
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.IndependentScreens
----import XMonad.Layout.NoBorders
-import XMonad.Layout.NoBorders (noBorders)
 
 
 import XMonad.Layout.CenteredMaster(centerMaster)
@@ -42,19 +40,13 @@ import qualified DBus as D
 import qualified DBus.Client as D
 
 
---Eric add to close all windows
-import XMonad.Actions.WithAll
-
-
-
 myStartupHook = do
     spawn "$HOME/.xmonad/scripts/autostart.sh"
     setWMName "LG3D"
 
 -- colours
 normBord = "#4c566a"
---focdBord = "#5e81ac"
-focdBord = "#fcae47"
+focdBord = "#5e81ac"
 fore     = "#DEE3E0"
 back     = "#282c34"
 winType  = "#c678dd"
@@ -69,8 +61,7 @@ encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
 --myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
---myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10"]
-myWorkspaces    = ["1-Molotov","2-Kodi","3-Code", "4-Browser","5-Mail","6-Spotify","7-Tweaks","8-Bpytop"]
+myWorkspaces    = ["1-Browser","2-Stocks","3-Code","4-Browser","5-Mail","6-Spotify","7-Calibre","8-System","9","10"]
 --myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
 
 myBaseConfig = desktopConfig
@@ -82,32 +73,32 @@ myManageHook = composeAll . concat $
     , [title =? t --> doFloat | t <- myTFloats]
     , [resource =? r --> doFloat | r <- myRFloats]
     , [resource =? i --> doIgnore | i <- myIgnores]
-    , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "1-Molotov" | x <- my1Shifts]
-    , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "2-Kodi" | x <- my2Shifts]
+    -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61612" | x <- my1Shifts]
+    -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61899" | x <- my2Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61947" | x <- my3Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61635" | x <- my4Shifts]
-    , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "5-Mail" | x <- my5Shifts]
-    , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "6-Spotify" | x <- my6Shifts]
+    -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61502" | x <- my5Shifts]
+    -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61501" | x <- my6Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61705" | x <- my7Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61564" | x <- my8Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\62150" | x <- my9Shifts]
     -- , [(className =? x <||> title =? x <||> resource =? x) --> doShiftAndGo "\61872" | x <- my10Shifts]
     ]
     where
-    doShiftAndGo = doF . liftM2 (.) W.greedyView W.shift
+    -- doShiftAndGo = doF . liftM2 (.) W.greedyView W.shift
     myCFloats = ["Arandr", "Arcolinux-calamares-tool.py", "Arcolinux-tweak-tool.py", "Arcolinux-welcome-app.py", "Galculator", "feh", "mpv", "Xfce4-terminal"]
     myTFloats = ["Downloads", "Save As..."]
     myRFloats = []
     myIgnores = ["desktop_window"]
-    my1Shifts = ["@molotov/desktop-wrapper"]
-    my2Shifts = ["Kodi"]
+    -- my1Shifts = ["Chromium", "Vivaldi-stable", "Firefox"]
+    -- my2Shifts = []
     -- my3Shifts = ["Inkscape"]
-    -- my4Shifts = ["Gimp", "feh"]
-    my5Shifts = ["Thunderbird"]
-    my6Shifts = ["Spotify"]
+    -- my4Shifts = []
+    -- my5Shifts = ["Gimp", "feh"]
+    -- my6Shifts = ["vlc", "mpv"]
     -- my7Shifts = ["Virtualbox"]
-    -- my8Shifts = ["Thunar", "Chromium", "Vivaldi-stable", "Firefox"]
-    -- my9Shifts = ["vlc", "mpv"]
+    -- my8Shifts = ["Thunar"]
+    -- my9Shifts = []
     -- my10Shifts = ["discord"]
 
 
@@ -144,21 +135,16 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   [ ((modMask, xK_e), spawn $ "atom" )
   , ((modMask, xK_c), spawn $ "conky-toggle" )
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
-  , ((modMask, xK_g), spawn $ "chromium -no-default-browser-check" )
   , ((modMask, xK_h), spawn $ "urxvt 'htop task manager' -e htop" )
-  , ((modMask, xK_m), spawn $ "thunderbird" )
-  --, ((modMask, xK_q), kill )
-  -- Eric add to kill all windows in a  workspace : Super+ Q
-  , ((modMask, xK_q), killAll )
+  , ((modMask, xK_m), spawn $ "pragha" )
+  , ((modMask, xK_q), kill )
   , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
-  -- Eric add to sink all floating windows in a  workspace : Super + S
-  , ((modMask, xK_s), sinkAll )
-  , ((modMask, xK_t), spawn $ "urxvt" )
+  , ((modMask, xK_t), spawn $ "termite" )
   , ((modMask, xK_v), spawn $ "pavucontrol" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "arcolinux-logout" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
-  , ((modMask, xK_Return), spawn $ "urxvt" )
+  , ((modMask, xK_Return), spawn $ "termite" )
   , ((modMask, xK_F1), spawn $ "vivaldi-stable" )
   , ((modMask, xK_F2), spawn $ "atom" )
   , ((modMask, xK_F3), spawn $ "inkscape" )
@@ -169,8 +155,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_F8), spawn $ "thunar" )
   , ((modMask, xK_F9), spawn $ "evolution" )
   , ((modMask, xK_F10), spawn $ "spotify" )
-  , ((modMask, xK_F11), spawn $ "rofi -show run -fullscreen" )
-  , ((modMask, xK_F12), spawn $ "rofi -show run" )
+  , ((modMask, xK_F11), spawn $ "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" )
+  , ((modMask, xK_F12), spawn $ "rofi -show drun" )
 
   -- FUNCTION KEYS
   , ((0, xK_F12), spawn $ "xfce4-terminal --drop-down" )
@@ -178,15 +164,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + SHIFT KEYS
 
   , ((modMask .|. shiftMask , xK_Return ), spawn $ "thunar")
-  --  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
-  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#a875d1' -sb '#a875d1' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
-
+  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask .|. shiftMask , xK_q ), kill)
-  -- Eric add to sink a floating windows: Super + Shift + S
-  , ((modMask .|. shiftMask , xK_s ), withFocused $ windows . W.sink)
-
-
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
 
   -- CONTROL + ALT KEYS
@@ -207,11 +187,11 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
   , ((controlMask .|. mod1Mask , xK_r ), spawn $ "rofi-theme-selector")
   , ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
-  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "urxvt")
+  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "termite")
   , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
   , ((controlMask .|. mod1Mask , xK_v ), spawn $ "vivaldi-stable")
   , ((controlMask .|. mod1Mask , xK_w ), spawn $ "arcolinux-welcome-app")
-  , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "urxvt")
+  , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "termite")
 
   -- ALT + ... KEYS
 
@@ -224,7 +204,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((mod1Mask, xK_Down), spawn $ "variety --resume" )
   , ((mod1Mask, xK_Left), spawn $ "variety -p" )
   , ((mod1Mask, xK_Right), spawn $ "variety -n" )
-  , ((mod1Mask, xK_F2), spawn $ "gmrun" )
+  , ((mod1Mask, xK_F2), spawn $ "xfce4-appfinder --collapsed" )
   , ((mod1Mask, xK_F3), spawn $ "xfce4-appfinder" )
 
   --VARIETY KEYS WITH PYWAL
@@ -263,6 +243,14 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Decrease brightness
   , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
 
+-- Alternative to increase brightness
+
+  -- Increase brightness
+  -- , ((0, xF86XK_MonBrightnessUp),  spawn $ "brightnessctl s 5%+")
+
+  -- Decrease brightness
+  -- , ((0, xF86XK_MonBrightnessDown), spawn $ "brightnessctl s 5%-")
+
 --  , ((0, xF86XK_AudioPlay), spawn $ "mpc toggle")
 --  , ((0, xF86XK_AudioNext), spawn $ "mpc next")
 --  , ((0, xF86XK_AudioPrev), spawn $ "mpc prev")
@@ -295,16 +283,11 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   --  Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf)
 
-  --  Toggle the Struts.
-  , ((modMask .|. shiftMask, xK_s), sendMessage ToggleStruts)
   -- Move focus to the next window.
   , ((modMask, xK_j), windows W.focusDown)
 
   -- Move focus to the previous window.
   , ((modMask, xK_k), windows W.focusUp  )
-
-  -- Move focus to the master window.
-  , ((modMask .|. shiftMask, xK_b), sendMessage $ Toggle NOBORDERS  )
 
   -- Move focus to the master window.
   , ((modMask .|. shiftMask, xK_m), windows W.focusMaster  )
@@ -348,7 +331,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- | (i, k) <- zip (XMonad.workspaces conf) [xK_1,xK_2,xK_3,xK_4,xK_5,xK_6,xK_7,xK_8,xK_9,xK_0]
 
   --French Azerty users use this line
-     | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_minus, xK_egrave, xK_underscore, xK_ccedilla , xK_agrave]
+   | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_minus, xK_egrave, xK_underscore, xK_ccedilla , xK_agrave]
 
   --Belgian Azerty users use this line
   -- | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_section, xK_egrave, xK_exclam, xK_ccedilla, xK_agrave]
@@ -376,9 +359,9 @@ main = do
     xmonad . ewmh $
   --Keyboard layouts
   --qwerty users use this line
-            --myBaseConfig
+            myBaseConfig
   --French Azerty users use this line
-            myBaseConfig { keys = azertyKeys <+> keys azertyConfig }
+            --myBaseConfig { keys = azertyKeys <+> keys azertyConfig }
   --Belgian Azerty users use this line
             --myBaseConfig { keys = belgianKeys <+> keys belgianConfig }
 
