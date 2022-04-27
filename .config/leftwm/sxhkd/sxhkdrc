@@ -72,15 +72,15 @@ super + c
 
 #Htop
 super + h
-    urxvt -e htop
+    alacritty -e htop
 
 #Rofi theme selector
 super + r
     rofi-theme-selector
 
-#Urxvt
+#Alacritty
 super + t
-    urxvt
+    alacritty
 
 #Pavucontrol
 super + v
@@ -90,18 +90,18 @@ super + v
 super + m
     pragha
 
-#urxvt
+#alacritty
 super + Return
-    urxvt
+    alacritty
 
 #Xkill
 super + Escape
     xkill
 
 #Keyboard dependent
-#urxvt
+#alacritty
 super + KP_Enter
-	urxvt
+	alacritty
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -197,13 +197,13 @@ ctrl + alt + r
 ctrl + alt + s
    spotify
 
-#urxvt
+#alacritty
 ctrl + alt + Return
-    urxvt
+    alacritty
 
-#urxvt
+#alacritty
 ctrl + alt + t
-    urxvt
+    alacritty
 
 #Vivaldi
 ctrl + alt + v
@@ -266,7 +266,7 @@ alt + F3
 
 #Xlunch app launcher
 #alt + F5
-#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv   
+#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv
 
 
 #################################################################
@@ -420,4 +420,3 @@ ctrl + alt + o
 #################################################################
 # CTRL + ALT KEYS
 #################################################################
-
