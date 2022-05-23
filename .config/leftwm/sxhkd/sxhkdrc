@@ -139,7 +139,7 @@ ctrl + alt + w
 
 #arcolinux-tweak-tool
 ctrl + alt + e
-    arcolinux-tweak-tool
+    archlinux-tweak-tool
 
 #conky-rotate
 ctrl + alt + Next
@@ -171,7 +171,7 @@ ctrl + alt + i
 
 #arcolinux-logout
 ctrl + alt + k
-     arcolinux-logout
+     archlinux-logout
 
 #arcolinux-logout
 ctrl + alt + l

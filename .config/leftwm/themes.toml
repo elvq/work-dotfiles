@@ -8,8 +8,8 @@ name = "Orange Forest"
 directory = "/home/eric/.config/leftwm/themes/Orange Forest"
 repository = "https://github.com/PVautour/leftwm-theme-orange-forest/"
 commit = "*"
-version = "0.0.1"
-leftwm_versions = "<0.3.0"
+version = "0.0.2"
+leftwm_versions = "^0.3.0"
 current = false
 
 [[repos.themes]]
@@ -53,8 +53,8 @@ name = "Dracula Rounded"
 directory = "/home/eric/.config/leftwm/themes/Dracula Rounded"
 repository = "https://github.com/AethanFoot/leftwm-theme-dracula-rounded/"
 commit = "*"
-version = "0.0.2"
-leftwm_versions = "^0.2.7, <0.3.0"
+version = "0.0.3"
+leftwm_versions = "^0.3.0"
 current = false
 
 [[repos.themes]]
@@ -63,7 +63,7 @@ directory = "/home/eric/.config/leftwm/themes/Forest"
 repository = "https://github.com/lex148/forest/"
 commit = "*"
 version = "0.0.1"
-leftwm_versions = "<0.3.0"
+leftwm_versions = "^0.3.0"
 current = false
 
 [[repos.themes]]
@@ -102,6 +102,7 @@ current = false
 
 [[repos.themes]]
 name = "Bumblebee"
+directory = "/home/eric/.config/leftwm/themes/Bumblebee"
 repository = "https://github.com/mfdorst/leftwm-bumblebee/"
 commit = "*"
 version = "0.0.1"
@@ -128,7 +129,7 @@ current = false
 name = "Epitaph"
 repository = "https://github.com/VentGrey/Epitaph"
 commit = "*"
-version = "0.0.1"
+version = "0.0.2"
 leftwm_versions = "*"
 current = false
 
@@ -158,6 +159,7 @@ current = false
 
 [[repos.themes]]
 name = "Amber"
+directory = "/home/eric/.config/leftwm/themes/Amber"
 repository = "https://github.com/di-effe/amber"
 commit = "*"
 version = "0.2.2"
@@ -166,6 +168,7 @@ current = false
 
 [[repos.themes]]
 name = "Catppuccin"
+directory = "/home/eric/.config/leftwm/themes/Catppuccin"
 repository = "https://github.com/di-effe/catppuccin"
 commit = "*"
 version = "0.1.1"
@@ -184,12 +187,13 @@ current = false
 name = "Double Bar"
 repository = "https://github.com/PeterDauwe/doublebar/"
 commit = "*"
-version = "0.0.1"
-leftwm_versions = "<0.3.0"
+version = "0.0.2"
+leftwm_versions = "^0.3.0"
 current = false
 
 [[repos.themes]]
 name = "SpaceJelly"
+directory = "/home/eric/.config/leftwm/themes/SpaceJelly"
 repository = "https://gitlab.com/jchand99/space_jelly"
 commit = "*"
 version = "1.0.0"
@@ -198,10 +202,19 @@ current = false
 
 [[repos.themes]]
 name = "Ascent"
+directory = "/home/eric/.config/leftwm/themes/Ascent"
 repository = "https://gitlab.com/mWalrus/ascent"
 commit = "*"
 version = "1.0.0"
 leftwm_versions = ">0.2.7"
+current = false
+
+[[repos.themes]]
+name = "Zexanima"
+repository = "https://github.com/calebgasser/zexanima-leftwm-theme/tree/develop"
+commit = "*"
+version = "0.0.1"
+leftwm_versions = ">0.3.0"
 current = false
 
 [[repos]]
@@ -402,6 +415,7 @@ current = false
 
 [[repos.themes]]
 name = "db-scifi-star"
+directory = "/home/eric/.config/leftwm/themes/db-scifi-star"
 repository = "https://github.com/arcolinux/arcolinux-leftwm-theme-db-scifi-star/"
 commit = "*"
 version = "2.4.1"
@@ -477,6 +491,7 @@ current = false
 
 [[repos.themes]]
 name = "sb-horror"
+directory = "/home/eric/.config/leftwm/themes/sb-horror"
 repository = "https://github.com/PeterDauwe/sb-horror"
 commit = "*"
 version = "2.3.2"
@@ -493,6 +508,7 @@ current = false
 
 [[repos.themes]]
 name = "kittycafe-dm"
+directory = "/home/eric/.config/leftwm/themes/kittycafe-dm"
 repository = "https://github.com/etrigan63/kittycafe-dm"
 commit = "*"
 version = "2.3.2"

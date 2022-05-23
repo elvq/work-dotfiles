@@ -356,3 +356,5 @@ command = "Execute"
 value = "leftwm-command \"SendWindowToTag 9\" \"SendWorkspaceToTag 0 8\""
 modifier = ["modkey", "Shift"]
 key = "ccedilla"
+
+
